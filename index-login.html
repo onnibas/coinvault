@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>coinvault - login</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style-login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="brand">
+            <div class="slogan">
+                <img src="./img/coinvault.png" alt="">
+                <p>we keep your money safe.</p>
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-card">
+                <!--./index-home.html-->
+                <form method="GET" action="">
+                    <label for="email">email</label>
+                    <input type="text" name="email" id="email">
+                    <label id="email-err" class="hidden">invalid email.</label>
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="password">
+                    <label id="password-err" class="hidden" style="margin-bottom: 4rem;">invalid password.</label>
+                    <button type="button" id="btn-login" type="submit" onclick="validateForm()">log in</button>
+                </form>
+                <span style="font-size: 1.5rem; color: var(--dark-gray);">don't have an account?</span>
+                <a id="link-signup" href="">sign up.</a>
+            </div>
+        </div>
+        <script src="script-login.js"></script>
+    </body>
+</html>
