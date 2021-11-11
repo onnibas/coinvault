@@ -128,3 +128,7 @@ body{
     display: block;
     cursor: pointer;
 }
+
+#btn-login:hover{
+    border-radius: 0.75rem;
+}
