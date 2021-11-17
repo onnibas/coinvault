@@ -1,0 +1,224 @@
+:root{
+    --black: #000000;
+    --dark-gray: #a7a7a7;
+    --light-gray: #eeeeee;
+    --white: #ffffff;
+    --ok: #4bc221;
+    --cancel: #c22148;
+}
+
+body{
+    font-family: 'Epilogue', sans-serif;
+
+    margin: 0;
+
+    display: inline;
+
+    overflow-x: hidden;
+}
+
+.navbar{
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.15);
+
+    font-size: 1.5rem;
+
+    width: 100vw;
+    height: 10%;
+
+    padding: 1.75rem;
+
+    display: flex;
+    align-items: center;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+.navlinks{
+    width: 13.3%;
+
+    margin-left: 40px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.navlinks a{
+    color: var(--dark-gray);
+
+    text-decoration: none;
+}
+
+#market{
+    color: var(--black);
+}
+
+#market:hover{
+    color: var(--black);
+}
+
+#wallet:hover{
+    color: var(--black);
+}
+
+#logout{
+    color: var(--dark-gray);
+
+    text-decoration: none;
+
+    position: absolute;
+    right: 2.25rem;
+}
+
+#logout:hover{
+    color: var(--black);
+}
+
+.text{
+    width: 72%;
+    height: 100%;
+
+    padding: 3rem;
+    padding-bottom: 0;
+    padding-right: 1.5rem;
+}
+
+.text span{
+    font-size: 2.25rem;
+}
+
+.text i{
+    font-size: 2rem;
+}
+
+.market{
+    display: flex;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.header{
+    width: 100%;
+
+    margin-bottom: 3rem;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.search{
+    width: 40%;
+
+    display: flex;
+    justify-content: end;
+}
+
+.search button{
+    background-color: var(--white);
+    color: var(--black);
+
+    border: none;
+
+    cursor: pointer;
+}
+
+#search{
+    font-family: 'Epilogue', sans-serif;
+    width: 100%;
+    height: 90%;
+
+    border: none;
+    border-bottom: 2px solid var(--black);
+
+    margin-right: 1rem;
+}
+
+#search:focus{
+    outline: none;
+}
+
+.cards{
+    height: 100%;
+    display: inline;
+}
+
+.card{
+    background-color: var(--light-gray);
+
+    padding: 3rem;
+
+    margin-bottom: 3rem;
+
+    display: flex;
+}
+
+.card span{
+    color: var(--dark-gray);
+}
+
+.name{
+    font-size: 1.5rem;
+
+    width: 75%;
+}
+
+.name span{
+    margin-right: 1rem;
+}
+
+.price{
+    text-align: end;
+
+    font-size: 1.5rem;
+
+    width: 25%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.change i{
+    font-size: 1.25rem;
+
+    margin-right: 0.5rem;
+}
+
+.change span{
+    font-size: 1.5rem;
+}
+
+.down span{
+    color: var(--cancel);
+}
+
+.down i{
+    color: var(--cancel);
+}
+
+.image{
+    width: 28%;
+
+    z-index: -9999;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.image img{
+    width: 25rem;
+}
+
+.footer{
+    background-color: var(--black);
+
+    width: 100vw;
+    height: 5rem;
+
+    display: flex;
+}
