@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>coinvault - wallet</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style-wallet.css">
+    <script src="https://kit.fontawesome.com/9a4d2450e2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./index-home.html"><img id="logo" src="./img/logo.png" alt="coinvault"></a>
+        <div class="navlinks">
+            <a id="market" href="./index-market.html">market</a>
+            <a id="wallet" href="">my wallet</a>
+        </div>
+        <a id="logout" href="./index.html">log out</a>
+    </div>
+    <div class="market">
+        <div class="image">
+            <img src="./img/imgholo.png" alt="">
+        </div>
+        <div class="text">
+            <div class="header">
+                <span id="today" class="today">my wallet</span>
+            </div>
+            <div class="cards">
+                <div class="card" id="doge">
+                    <div class="name">
+                        <span class="money" style="color: var(--black);">21.33</span>
+                        <span class="money" style="color: var(--black);">doge</span>
+                        <span>dogecoin</span>
+                    </div>
+                    <div class="price">
+                        <span class="money">$ 15.80</span>
+                    </div>
+                    <div class="buttons">
+                        <label id="sell" for="modal-s" class="label-button"><i class="fas fa-dollar-sign"></i></label>
+                        <label id="acquire" for="modal-a" class="label-button"><i class="fas fa-plus"></i></label>
+                    </div>
+                </div>
+                <div class="card" id="xrp">
+                    <div class="name">
+                        <span class="money" style="color: var(--black);">4.53</span>
+                        <span class="money" style="color: var(--black);">xrp</span>
+                        <span>xrp</span>
+                    </div>
+                    <div class="price">
+                        <span class="money">$ 97.01</span>
+                    </div>
+                    <div class="buttons">
+                        <label id="sell" for="modal-s" class="label-button"><i class="fas fa-dollar-sign"></i></label>
+                        <label id="acquire" for="modal-a" class="label-button"><i class="fas fa-plus"></i></label>
+                    </div>
+                </div>
+                <div class="card" id="ada">
+                    <div class="name">
+                        <span class="money" style="color: var(--black);">5.74</span>
+                        <span class="money" style="color: var(--black);">ada</span>
+                        <span>cardano</span>
+                    </div>
+                    <div class="price">
+                        <span class="money">$ 11.20</span>
+                    </div>
+                    <div class="buttons">
+                        <label id="sell" for="modal-s" class="label-button"><i class="fas fa-dollar-sign"></i></label>
+                        <label id="acquire" for="modal-a" class="label-button"><i class="fas fa-plus"></i></label>
+                    </div>
+                </div>
+            </div>
+            <input type="checkbox" id="modal-s">
+            <label for="modal-1" class="modal-background"></label>
+            <div class="modal-sell">
+                <div class="modal-header">
+                    <label for="modal-s">
+                        <i class="fas fa-times" style="font-size: 1rem"></i>
+                    </label>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <div class="line-1">
+                            <div class="form-amount">
+                                <label for="amount">amount</label>
+                                <input type="number" id="amount">
+                            </div>
+                        </div>
+                        <div class="line-2">
+                            <div class="form-name">
+                                <label for="name" style="display: inline-flex;">name on card</label>
+                                <input type="text" id="name" style="display: inline-flex;">
+                            </div>
+                            <div class="form-cvv">
+                                <label for="cvv">cvv</label>
+                                <input type="number" id="cvv">
+                            </div>
+                        </div>
+                        <div class="line-3">
+                            <div class="form-number">
+                                <label for="card-number">credit card number</label>
+                                <input type="text" id="card-number">
+                            </div>
+                            <div class="form-date">
+                                <label for="date">exp date</label>
+                                <input type="date" id="date" style="padding: 0.8rem;">
+                            </div>
+                        </div>
+                        <div class="line-4">
+                            <button type="button" id="btn-acquire">confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <input type="checkbox" id="modal-a">
+            <label for="modal-2" class="modal-background"></label>
+            <div class="modal-acquire">
+                <div class="modal-header">
+                    <label for="modal-a">
+                        <i class="fas fa-times" style="font-size: 1rem"></i>
+                    </label>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <div class="line-1">
+                            <div class="form-amount">
+                                <label for="amount">amount</label>
+                                <input type="number" id="amount">
+                            </div>
+                        </div>
+                        <div class="line-2">
+                            <div class="form-name">
+                                <label for="name" style="display: inline-flex;">name on card</label>
+                                <input type="text" id="name" style="display: inline-flex;">
+                            </div>
+                            <div class="form-cvv">
+                                <label for="cvv">cvv</label>
+                                <input type="number" id="cvv">
+                            </div>
+                        </div>
+                        <div class="line-3">
+                            <div class="form-number">
+                                <label for="card-number">credit card number</label>
+                                <input type="text" id="card-number">
+                            </div>
+                            <div class="form-date">
+                                <label for="date">exp date</label>
+                                <input type="date" id="date" style="padding: 0.8rem;">
+                            </div>
+                        </div>
+                        <div class="line-4">
+                            <button type="button" id="btn-acquire">confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="script-wallet.js"></script>
+</body>
+
+</html>
