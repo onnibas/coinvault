@@ -35,12 +35,15 @@
                         <span class="money" style="color: var(--black);">doge</span>
                         <span>dogecoin</span>
                     </div>
-                    <div class="price">
-                        <span class="money">$ 15.80</span>
-                    </div>
-                    <div class="buttons">
-                        <label id="sell" for="modal-s" class="label-button"><i class="fas fa-dollar-sign"></i></label>
-                        <label id="acquire" for="modal-a" class="label-button"><i class="fas fa-plus"></i></label>
+                    <div class="actions">
+                        <div class="price">
+                            <span>$ </span>
+                            <span class="money" id="dogebalance">15.80</span>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" id="sellDoge"class="label-button doge" name="doge" onclick="getName(doge); openModalSell()"><i class="fas fa-dollar-sign"></i></button>
+                            <button type="button" id="acquireDoge" class="label-button doge" name="doge" onclick="getName(doge); openModalAcquire()"><i class="fas fa-plus"></i></button>
+                        </div>
                     </div>
                 </div>
                 <div class="card" id="xrp">
@@ -49,12 +52,15 @@
                         <span class="money" style="color: var(--black);">xrp</span>
                         <span>xrp</span>
                     </div>
-                    <div class="price">
-                        <span class="money">$ 97.01</span>
-                    </div>
-                    <div class="buttons">
-                        <label id="sell" for="modal-s" class="label-button"><i class="fas fa-dollar-sign"></i></label>
-                        <label id="acquire" for="modal-a" class="label-button"><i class="fas fa-plus"></i></label>
+                    <div class="actions">
+                        <div class="price">
+                            <span>$ </span>
+                            <span class="money" id="xrpbalance">97.01</span>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" id="sellXrp" class="label-button xrp" name="xrp" onclick="getName(xrp); openModalSell()"><i class="fas fa-dollar-sign"></i></button>
+                            <button type="button" id="acquireXrp" class="label-button xrp" name="xrp" onclick="getName(xrp); openModalAcquire()"><i class="fas fa-plus"></i></button>
+                        </div>
                     </div>
                 </div>
                 <div class="card" id="ada">
@@ -63,95 +69,81 @@
                         <span class="money" style="color: var(--black);">ada</span>
                         <span>cardano</span>
                     </div>
-                    <div class="price">
-                        <span class="money">$ 11.20</span>
-                    </div>
-                    <div class="buttons">
-                        <label id="sell" for="modal-s" class="label-button"><i class="fas fa-dollar-sign"></i></label>
-                        <label id="acquire" for="modal-a" class="label-button"><i class="fas fa-plus"></i></label>
+                    <div class="actions">
+                        <div class="price">
+                            <span>$ </span>
+                            <span class="money" id="adabalance">11.20</span>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" id="sellAda" class="label-button ada" name="ada" onclick="getName(ada); openModalSell()"><i class="fas fa-dollar-sign"></i></button>
+                            <button type="button" id="acquireAda" class="label-button ada" name="ada" onclick="getName(ada); openModalAcquire()"><i class="fas fa-plus"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <input type="checkbox" id="modal-s">
-            <label for="modal-1" class="modal-background"></label>
-            <div class="modal-sell">
+            <div class="modal-background hidden"></div>
+            <div class="modal-sell hidden" id="modalSell">
                 <div class="modal-header">
-                    <label for="modal-s">
-                        <i class="fas fa-times" style="font-size: 1rem"></i>
-                    </label>
+                    <button type="button" onclick="closeModalSell()"><i class="fas fa-times"></i></button>
                 </div>
                 <div class="form">
-                    <form action="">
+                    <form action="" id="sellForm">
                         <div class="line-1">
                             <div class="form-amount">
                                 <label for="amount">amount</label>
-                                <input type="number" id="amount">
+                                <input type="number" id="sellAmount">
                             </div>
                         </div>
                         <div class="line-2">
-                            <div class="form-name">
-                                <label for="name" style="display: inline-flex;">name on card</label>
-                                <input type="text" id="name" style="display: inline-flex;">
+                            <div class="form-number">
+                                <label for="card-number">credit card number</label>
+                                <input type="text" id="sellCardNumber">
                             </div>
                             <div class="form-cvv">
                                 <label for="cvv">cvv</label>
-                                <input type="number" id="cvv">
-                            </div>
-                        </div>
-                        <div class="line-3">
-                            <div class="form-number">
-                                <label for="card-number">credit card number</label>
-                                <input type="text" id="card-number">
-                            </div>
-                            <div class="form-date">
-                                <label for="date">exp date</label>
-                                <input type="date" id="date" style="padding: 0.8rem;">
+                                <input type="number" id="sellCvv">
                             </div>
                         </div>
                         <div class="line-4">
-                            <button type="button" id="btn-acquire">confirm</button>
+                            <button type="button" id="btnSell" class="btnConfirm" onclick="validateFormSell()">confirm</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <input type="checkbox" id="modal-a">
-            <label for="modal-2" class="modal-background"></label>
-            <div class="modal-acquire">
+            <div class="modal-acquire hidden" id="modalAcquire">
                 <div class="modal-header">
-                    <label for="modal-a">
-                        <i class="fas fa-times" style="font-size: 1rem"></i>
-                    </label>
+                    <button type="button" onclick="closeModalAcquire()"><i class="fas fa-times"></i></button>
                 </div>
                 <div class="form">
-                    <form action="">
+                    <form action="" id="acquireForm">
                         <div class="line-1">
                             <div class="form-amount">
                                 <label for="amount">amount</label>
-                                <input type="number" id="amount">
+                                <input type="number" id="acquireAmount" name="amount">
                             </div>
                         </div>
                         <div class="line-2">
                             <div class="form-name">
                                 <label for="name" style="display: inline-flex;">name on card</label>
-                                <input type="text" id="name" style="display: inline-flex;">
+                                <input type="text" id="name" name="name" style="display: inline-flex;">
                             </div>
                             <div class="form-cvv">
                                 <label for="cvv">cvv</label>
-                                <input type="number" id="cvv">
+                                <input type="number" id="acquireCvv" name="cvv">
                             </div>
                         </div>
                         <div class="line-3">
                             <div class="form-number">
                                 <label for="card-number">credit card number</label>
-                                <input type="text" id="card-number">
+                                <input type="text" id="acquireCardNumber" name="card-number">
                             </div>
                             <div class="form-date">
                                 <label for="date">exp date</label>
-                                <input type="date" id="date" style="padding: 0.8rem;">
+                                <input type="text" id="date" name="date">
                             </div>
                         </div>
                         <div class="line-4">
-                            <button type="button" id="btn-acquire">confirm</button>
+                            <button type="button" id="btnAcquire" class="btnConfirm" onclick="validateFormAcquire()">confirm</button>
                         </div>
                     </form>
                 </div>
@@ -161,5 +153,6 @@
     <div class="footer"></div>
     <script src="script-wallet.js"></script>
 </body>
-
 </html>
+
+
