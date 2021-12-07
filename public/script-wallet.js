@@ -74,7 +74,7 @@ function validateFormAcquire(){
         acquireOperation.name.value.match(/[a-zA-Z]/) &&
         acquireOperation.cvv.value.match(/[0-9]{3}/) &&
         acquireOperation.number.value.match(/(\d{4}[-. ]?){4}|\d{4}[-. ]?\d{6}[-. ]?\d{5}/) &&
-        acquireOperation.date.value.match(/^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$/)
+        acquireOperation.date.value.match(/^([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$/)
     ) {
         if(window.confirm("are you sure you want to buy?")){
             getValuesAcquire()

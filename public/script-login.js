@@ -7,7 +7,7 @@ function validateForm(){
         document.getElementById("email-err").classList.remove("hidden");
     }
 
-    if (!password){
+    if (!password || !(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password))){
         document.getElementById("password").classList.add("input-err");
         document.getElementById("password-err").classList.remove("hidden");
     }
