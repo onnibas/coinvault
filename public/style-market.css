@@ -196,6 +196,10 @@ body{
     outline: none;
 }
 
+#searchPlaceholder:focus{
+    outline: none;
+}
+
 .cards{
     height: 100%;
     display: inline;
