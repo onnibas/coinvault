@@ -224,7 +224,7 @@ body{
     right: 0;
     bottom: 0;
     margin: auto;
-    height: 60vh;	
+    height: 48vh;	
     width: 60vw;
     background-color: #fff;
     box-sizing: border-box;
@@ -250,7 +250,7 @@ body{
 }
 
 .modal-header button {
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0);
 
     font-size: 1rem;
     
@@ -306,27 +306,39 @@ form{
 
     background-color: var(--light-gray);
 
-    width: 100%;
-
     padding: 1rem;
     border: none;
 }
 
-.form-cvv input{
-    width: 85%;
-}
-
-.form-date input{
-    width: 87%;
+.form-amount input{
+    width: 97%;
 }
 
 .form-name{
     width: 72%;
 }
 
+.form-name input{
+    width: 95.79%;
+}
+
+.form-cvv input{
+    width: 85%;
+}
+
+.form-number input{
+    width: 95.79%
+}
+
 .form-date{
     width: 21%;
 }
+
+.form-date input{
+    width: 85%;
+}
+
+
 
 .form-number{
     width: 72%;

@@ -1,37 +1,3 @@
-/**
- * FORM COMPRAR CRYPTO
- * 
- * armazenar a quantidade atual de crypto em $ (presente na label) com base na moeda selecionada
- * 
- * verificar se os campos estão preenchidos
- * verificar se o nome é válido
- * verificar se o cvv tem somente 3 digitos
- * verificar se o numero do cartão tem 16+4 digitos (0000 0000 0000 0000)
- * verificar se a data não venceu
- * 
- * adicionar o valor de AMOUNT na label do saldo atual
- */
-
-/**
- * FORM VENDER CRYPTO
- * 
- * armazenar a quantidade atual de crypto em $ (presente na label) com base na moeda selecionada
- * 
- * verificar se os campos estão preenchidos
- * verificar se o cvv tem somente 3 digitos
- * verificar se o numero do cartão tem 16+4 digitos (0000 0000 0000 0000)
- * 
- * subtrair o valor de AMOUNT na label do saldo atual
- */
-
-/**
- * PROBLEMAS
- * 
- * o window.confirm() já fica disponivel quando há um só campo preenchido no form
- * preciso que ele apareça somente quando todos estiverem preenchidos corretamente
- * para isso, preciso verificar o valor de cada input e só depois acioná-lo
- */
-
 var scope = "";
 
 var acquireOperation = {
@@ -105,10 +71,10 @@ function validateFormAcquire(){
     }
     if (
         acquireOperation.amount.value &&
-        acquireOperation.name.value &&
-        acquireOperation.cvv.value &&
-        acquireOperation.number.value &&
-        acquireOperation.date.value
+        acquireOperation.name.value.match(/[a-zA-Z]/) &&
+        acquireOperation.cvv.value.match(/[0-9]{3}/) &&
+        acquireOperation.number.value.match(/(\d{4}[-. ]?){4}|\d{4}[-. ]?\d{6}[-. ]?\d{5}/) &&
+        acquireOperation.date.value.match(/^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$/)
     ) {
         if(window.confirm("are you sure you want to buy?")){
             getValuesAcquire()
@@ -131,8 +97,8 @@ function validateFormSell(){
     }
     if (
         sellOperation.amount.value &&
-        sellOperation.cvv.value &&
-        sellOperation.number.value
+        sellOperation.cvv.value.match(/[0-9]{3}/) &&
+        sellOperation.number.value.match(/(\d{4}[-. ]?){4}|\d{4}[-. ]?\d{6}[-. ]?\d{5}/)
     ) {
         if(window.confirm("are you sure you want to sell?")){
             getValuesSell()
