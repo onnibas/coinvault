@@ -1,5 +1,5 @@
 function search(){
-    let input = document.getElementById("search").value
+    let input = document.getElementById("search").value || document.getElementById("searchPlaceholder").value
     
     document.getElementById("btc").classList.add("hidden")
     document.getElementById("eth").classList.add("hidden")

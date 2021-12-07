@@ -22,7 +22,7 @@ body{
 
     font-size: 1.5rem;
 
-    width: 100vw;
+    width: 100%;
     height: 10%;
 
     padding: 1.75rem;
@@ -36,16 +36,16 @@ body{
 }
 
 .navlinks{
-    width: 13.3%;
-
-    margin-left: 40px;
-
+    margin-left: 2.5rem;
+    
     display: flex;
     justify-content: space-between;
 }
 
 .navlinks a{
     color: var(--dark-gray);
+    
+    margin: 0 2.5rem;
 
     text-decoration: none;
 }
@@ -62,6 +62,14 @@ body{
     color: var(--black);
 }
 
+#navlogout{
+    display: none;
+}
+
+#navlogout:hover{
+    color: var(--black);
+}
+
 #logout{
     color: var(--dark-gray);
 
@@ -72,6 +80,39 @@ body{
 }
 
 #logout:hover{
+    color: var(--black);
+}
+
+.navicons{
+    width: 90%;
+    
+    margin-top: 2rem;
+
+    display: none;
+    justify-content: space-around;
+}
+
+.navicons i{
+    color: var(--dark-gray);
+    
+    margin: 0 2.5rem;
+
+    text-decoration: none;
+}
+
+#iconmarket i{
+    color: var(--black);
+}
+
+#iconmarket i:hover{
+    color: var(--black);
+}
+
+#iconwallet i:hover{
+    color: var(--black);
+}
+
+#iconlogout i:hover{
     color: var(--black);
 }
 
@@ -117,12 +158,13 @@ body{
     justify-content: end;
 }
 
+
 .search button{
     background-color: var(--white);
     color: var(--black);
-
+    
     border: none;
-
+    
     cursor: pointer;
 }
 
@@ -130,11 +172,24 @@ body{
     font-family: 'Epilogue', sans-serif;
     width: 100%;
     height: 90%;
-
+    
     border: none;
     border-bottom: 2px solid var(--black);
-
+    
     margin-right: 1rem;
+}
+
+#searchPlaceholder{
+    font-family: 'Epilogue', sans-serif;
+    width: 100%;
+    height: 90%;
+    
+    border: none;
+    border-bottom: 2px solid var(--black);
+    
+    margin-right: 1rem;
+
+    display: none;
 }
 
 #search:focus{
@@ -160,14 +215,21 @@ body{
     color: var(--dark-gray);
 }
 
+
 .name{
     font-size: 1.5rem;
-
-    width: 75%;
+    
+    width: 66%;
 }
 
 .name span{
     margin-right: 1rem;
+}
+
+.money{
+    color: var(--black) !important;
+
+    display: inline;
 }
 
 .price{
@@ -175,7 +237,7 @@ body{
 
     font-size: 1.5rem;
 
-    width: 25%;
+    width: 33%;
 
     display: flex;
     justify-content: space-between;
@@ -217,8 +279,118 @@ body{
 .footer{
     background-color: var(--black);
 
-    width: 100vw;
+    width: 100%;
     height: 5rem;
 
     display: flex;
+}
+
+@media screen and (max-width: 1440px) {
+    .image{
+        display: none;
+    }
+    .text{
+        width: 100%;
+
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    .navbar{
+        display: block;
+    }
+
+    .logo{
+        width: 90%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    #logo{
+        margin: 0 auto
+    }
+
+    .navlinks{
+        margin: 0;
+        margin-top: 2rem;
+        margin-right: 5.5rem;
+
+        justify-content: space-around;
+    }
+    
+    #logout{
+        display: none;
+    }
+
+    #navlogout{
+        display: block;
+    }
+
+    #today{
+        display: none;
+    }
+
+    .search{
+        width: 100%;
+    }
+
+    #search{
+        display: none;
+    }
+
+    #searchPlaceholder{
+        display: inline;
+    }
+
+    .name{
+        width: 50%;
+    }
+
+    .price{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .navlinks{
+        display: none;
+    }
+
+    .navicons{
+        display: flex;
+    }
+
+    .card{
+        padding: 1.5rem;
+
+        justify-content: space-between;
+    }
+
+    .name{
+        width: 30%;
+    }
+
+    .price{
+        width: 30%;
+    }
+
+    .name span, .price span{
+        font-size: 1.25rem;
+    }
+    
+    .money{
+        display: block;
+    }
+
+    .change span{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .price{
+        width: 50%
+    }
 }
