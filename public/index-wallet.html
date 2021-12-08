@@ -13,10 +13,18 @@
 
 <body>
     <div class="navbar">
-        <a href="./index-home.html"><img id="logo" src="./img/logo.png" alt="coinvault"></a>
+        <div class="logo">
+            <a href=""><img id="logo" src="./img/logo.png" alt="coinvault"></a>
+        </div>
         <div class="navlinks">
             <a id="market" href="./index-market.html">market</a>
-            <a id="wallet" href="">my wallet</a>
+            <a id="wallet" href="./index-wallet.html">my wallet</a>
+            <a id="navlogout" href="./index.html">log out</a>
+        </div>
+        <div class="navicons">
+            <a id="iconmarket" href="./index-market.html"><i class="fas fa-search-dollar"></i></a>
+            <a id="iconwallet" href="./index-wallet.html"><i class="fas fa-wallet"></i></a>
+            <a id="iconlogout" href="./index.html"><i class="fas fa-sign-out-alt"></i></a>
         </div>
         <a id="logout" href="./index.html">log out</a>
     </div>
@@ -31,9 +39,9 @@
             <div class="cards">
                 <div class="card" id="doge">
                     <div class="name">
-                        <span class="money" style="color: var(--black);">21.33</span>
-                        <span class="money" style="color: var(--black);">doge</span>
-                        <span>dogecoin</span>
+                        <span class="money quantity">21.33</span>
+                        <span class="money">doge</span>
+                        <span class="moneyname">dogecoin</span>
                     </div>
                     <div class="actions">
                         <div class="price">
@@ -45,12 +53,16 @@
                             <button type="button" id="acquireDoge" class="label-button doge" name="doge" onclick="getName(doge); openModalAcquire()"><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
+                    <div class="buttonsPlaceholder">
+                        <button type="button" id="sellDoge"class="label-button doge" name="doge" onclick="getName(doge); openModalSell()"><i class="fas fa-dollar-sign"></i></button>
+                        <button type="button" id="acquireDoge" class="label-button doge" name="doge" onclick="getName(doge); openModalAcquire()"><i class="fas fa-plus"></i></button>
+                    </div>
                 </div>
                 <div class="card" id="xrp">
                     <div class="name">
-                        <span class="money" style="color: var(--black);">4.53</span>
-                        <span class="money" style="color: var(--black);">xrp</span>
-                        <span>xrp</span>
+                        <span class="money quantity">4.53</span>
+                        <span class="money">xrp</span>
+                        <span class="moneyname">xrp</span>
                     </div>
                     <div class="actions">
                         <div class="price">
@@ -62,12 +74,16 @@
                             <button type="button" id="acquireXrp" class="label-button xrp" name="xrp" onclick="getName(xrp); openModalAcquire()"><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
+                    <div class="buttonsPlaceholder">
+                        <button type="button" id="sellXrp" class="label-button xrp" name="xrp" onclick="getName(xrp); openModalSell()"><i class="fas fa-dollar-sign"></i></button>
+                        <button type="button" id="acquireXrp" class="label-button xrp" name="xrp" onclick="getName(xrp); openModalAcquire()"><i class="fas fa-plus"></i></button>
+                    </div>
                 </div>
                 <div class="card" id="ada">
                     <div class="name">
-                        <span class="money" style="color: var(--black);">5.74</span>
-                        <span class="money" style="color: var(--black);">ada</span>
-                        <span>cardano</span>
+                        <span class="money quantity">5.74</span>
+                        <span class="money">ada</span>
+                        <span class="moneyname">cardano</span>
                     </div>
                     <div class="actions">
                         <div class="price">
@@ -78,6 +94,10 @@
                             <button type="button" id="sellAda" class="label-button ada" name="ada" onclick="getName(ada); openModalSell()"><i class="fas fa-dollar-sign"></i></button>
                             <button type="button" id="acquireAda" class="label-button ada" name="ada" onclick="getName(ada); openModalAcquire()"><i class="fas fa-plus"></i></button>
                         </div>
+                    </div>
+                    <div class="buttonsPlaceholder">
+                        <button type="button" id="sellAda" class="label-button ada" name="ada" onclick="getName(ada); openModalSell()"><i class="fas fa-dollar-sign"></i></button>
+                        <button type="button" id="acquireAda" class="label-button ada" name="ada" onclick="getName(ada); openModalAcquire()"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
             </div>
