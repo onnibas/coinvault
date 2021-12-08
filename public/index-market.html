@@ -1,115 +1,118 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>coinvault - market</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style-market.css">
-        <script src="https://kit.fontawesome.com/9a4d2450e2.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="navbar">
-            <div class="logo">
-                <a href=""><img id="logo" src="./img/logo.png" alt="coinvault"></a>
-            </div>
-            <div class="navlinks">
-                <a id="market" href="./index-market.html">market</a>
-                <a id="wallet" href="./index-wallet.html">my wallet</a>
-                <a id="navlogout" href="./index.html">log out</a>
-            </div>
-            <div class="navicons">
-                <a id="iconmarket" href="./index-market.html"><i class="fas fa-search-dollar"></i></a>
-                <a id="iconwallet" href="./index-wallet.html"><i class="fas fa-wallet"></i></a>
-                <a id="iconlogout" href="./index.html"><i class="fas fa-sign-out-alt"></i></a>
-            </div>
-            <a id="logout" href="./index.html">log out</a>
+
+<head>
+    <title>coinvault - market</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style-market.css">
+    <script src="https://kit.fontawesome.com/9a4d2450e2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href=""><img id="logo" src="./img/logo.png" alt="coinvault"></a>
         </div>
+        <div class="navlinks">
+            <a id="market" href="./index-market.html">market</a>
+            <a id="wallet" href="./index-wallet.html">my wallet</a>
+            <a id="navlogout" href="./index.html">log out</a>
         </div>
-        <div class="market">
-            <div class="text">
-                <div class="header">
-                    <span id="today" class="today">the market today</span>
-                    <div class="search">
-                        <input type="text" id="search">
-                        <input type="text" id="searchPlaceholder" placeholder="the market today">
-                        <button type="button" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="navicons">
+            <a id="iconmarket" href="./index-market.html"><i class="fas fa-search-dollar"></i></a>
+            <a id="iconwallet" href="./index-wallet.html"><i class="fas fa-wallet"></i></a>
+            <a id="iconlogout" href="./index.html"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+        <a id="logout" href="./index.html">log out</a>
+    </div>
+    </div>
+    <div class="market">
+        <div class="text">
+            <div class="header">
+                <span id="today" class="today">the market today</span>
+                <div class="search">
+                    <input type="text" id="search">
+                    <input type="text" id="searchPlaceholder" placeholder="the market today">
+                    <button type="button" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" id="btc" name="bitcoin">
+                    <div class="name">
+                        <span class="money">btc</span>
+                        <span>bitcoin</span>
+                    </div>
+                    <div class="price">
+                        <span>$ 61,251.92</span>
+                        <div class="change down">
+                            <i class="fa-solid fa-angles-down"></i>
+                            <span>7%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="cards">
-                    <div class="card" id="btc" name="bitcoin">
-                        <div class="name">
-                            <span class="money">btc</span>
-                            <span>bitcoin</span>
-                        </div>
-                        <div class="price">
-                            <span>$ 61,251.92</span>
-                            <div class="change down">
-                                <i class="fa-solid fa-angles-down"></i>
-                                <span>7%</span>
-                            </div>
+                <div class="card" id="eth" name="ethereum">
+                    <div class="name">
+                        <span class="money">eth</span>
+                        <span>ethereum</span>
+                    </div>
+                    <div class="price">
+                        <span>$ 4,355.83</span>
+                        <div class="change down">
+                            <i class="fa-solid fa-angles-down"></i>
+                            <span>7%</span>
                         </div>
                     </div>
-                    <div class="card" id="eth"  name="ethereum">
-                        <div class="name">
-                            <span class="money">eth</span>
-                            <span>ethereum</span>
-                        </div>
-                        <div class="price">
-                            <span>$ 4,355.83</span>
-                            <div class="change down">
-                                <i class="fa-solid fa-angles-down"></i>
-                                <span>7%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" id="doge" name="doge coin">
-                        <div class="name">
-                            <span class="money"">doge</span>
+                </div>
+                <div class="card" id="doge" name="doge coin">
+                    <div class="name">
+                        <span class="money"">doge</span>
                             <span>dogecoin</span>
                         </div>
-                        <div class="price">
+                        <div class=" price">
                             <span>$ 0.24</span>
                             <div class="change down">
                                 <i class="fa-solid fa-angles-down"></i>
                                 <span>5%</span>
                             </div>
+                    </div>
+                </div>
+                <div class="card" id="xrp" name="xrp">
+                    <div class="name">
+                        <span class="money">xrp</span>
+                        <span>xrp</span>
+                    </div>
+                    <div class="price">
+                        <span>$ 1.13</span>
+                        <div class="change down">
+                            <i class="fa-solid fa-angles-down"></i>
+                            <span>6%</span>
                         </div>
                     </div>
-                    <div class="card" id="xrp"  name="xrp">
-                        <div class="name">
-                            <span class="money">xrp</span>
-                            <span>xrp</span>
-                        </div>
-                        <div class="price">
-                            <span>$ 1.13</span>
-                            <div class="change down">
-                                <i class="fa-solid fa-angles-down"></i>
-                                <span>6%</span>
-                            </div>
-                        </div>
+                </div>
+                <div class="card" id="ada" name="cardano">
+                    <div class="name">
+                        <span class="money" style="color: var(--black);">ada</span>
+                        <span>cardano</span>
                     </div>
-                    <div class="card" id="ada" name="cardano">
-                        <div class="name">
-                            <span class="money" style="color: var(--black);">ada</span>
-                            <span>cardano</span>
-                        </div>
-                        <div class="price">
-                            <span>$ 1.95</span>
-                            <div class="change down">
-                                <i class="fa-solid fa-angles-down"></i>
-                                <span>5%</span>
-                            </div>
+                    <div class="price">
+                        <span>$ 1.95</span>
+                        <div class="change down">
+                            <i class="fa-solid fa-angles-down"></i>
+                            <span>5%</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="image">
-                <img src="./img/imgholo.png" alt="">
-            </div>
         </div>
-        <div class="footer"></div>
-        <script src="script-market.js"></script>
-    </body>
+        <div class="image">
+            <img src="./img/imgholo.png" alt="">
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="script-market.js"></script>
+</body>
+
 </html>
